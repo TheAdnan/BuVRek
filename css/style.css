@@ -9,13 +9,15 @@ body {
 }
 
 .confirm-box {
+  align-content: center;
+  text-align: center;
   margin: 0 auto!important;
 	width:280px;
   position:relative;
   margin:30px auto;
   
   color:rgba(0,0,0,0.8);
-  font-family:Helvetica;
+  font-family:Ubuntu;
   font-size:15px;
   font-weight:bold;
   
@@ -27,6 +29,9 @@ body {
     inset 0 30px 30px rgba(255,255,255,0.2),
     0 0 10px rgba(0,0,0,0.4);
   
+}
+.confirm-box > small {
+  color: rgba(0,0,0, 0.7);
 }
 .confirm-box:after {
    	content:"";
@@ -59,7 +64,7 @@ body {
 
 .confirm-box a {
  	display:block;
-  float:left;
+  float:none;
   position:relative;
   
   padding:7px 40px;

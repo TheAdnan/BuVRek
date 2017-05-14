@@ -8,7 +8,7 @@
 
   BurekCurve.prototype = Object.create( THREE.Curve.prototype );
   BurekCurve.prototype.constructor = BurekCurve;
-//Used a tweaked version of the Archimedean spiral formula for creating the Burek-y spiral
+
   BurekCurve.prototype.getPoint = function ( t ) {
     var tx = t * Math.cos( 6 * Math.PI * t );
     var ty = t * Math.sin( 6 * Math.PI * t );
@@ -30,3 +30,4 @@
     
   }
 });
+
