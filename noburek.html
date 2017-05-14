@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>No BuVRek</title>
+    <meta name="description" content="BuVRek - Virtual Burek by Adnan Kičin">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity position="0.4 1.6 4.8" camera="active:true;userHeight:1.6" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector="default-camera"></a-entity>
+      <a-assets>
+        <img id="burek-texture" src="https://img.gs/bbdkhfbzkk/stretch/http://www.bosanski-forum.com/download/file.php?id=8531&t=1&sid=73059bd46708f97c574229c84be533d9">
+        <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
+        <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
+        <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://cdn.wonderfulengineering.com/wp-content/uploads/2015/07/bosnia-flag-4.jpg" crossorigin="anonymous" />
+        <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
+        <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
+      </a-assets>
+
+      
+
+      <a-entity id="text-burek" position="-3 1 -6" rotation="5 0 0">
+        <a-entity position="-0.5 0.5 -0.5" scale="0.3 0.6 0.6" text-geometry="value: Fatal  Error: Sirnica  is  not  a  Burek; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.2; curveSegments: 1; size: 1.6; height: 0.4;" material="color:green; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+      </a-entity>
+      
+    
+      <a-entity
+        geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
+        material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
+      <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
+      <a-entity light="color: ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
+      <a-entity light="color: white; intensity: 0.5" position="-5 5 15"></a-entity>
+      <a-entity light="color: white; type: ambient;"></a-entity>
+
+      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+    </a-scene>
+  </body>
+</html>
