@@ -1,0 +1,107 @@
+* {
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+body {
+ 	background:#EDEDED; 
+}
+
+.confirm-box {
+  margin: 0 auto!important;
+	width:280px;
+  position:relative;
+  margin:30px auto;
+  
+  color:rgba(0,0,0,0.8);
+  font-family:Helvetica;
+  font-size:15px;
+  font-weight:bold;
+  
+  background:#333;  
+  border-radius:0.4em;
+  border:1px solid rgba(0,0,0,0.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 30px 30px rgba(255,255,255,0.2),
+    0 0 10px rgba(0,0,0,0.4);
+  
+}
+.confirm-box:after {
+   	content:"";
+    display:table;
+    clear:both;
+  }
+  
+  .confirm-box:before {
+   	content:"";
+    display:block;
+    position:absolute;
+    width:100%;
+    height:1px;
+    background:rgba(255,255,255,0.3);
+    top:35px;
+    left:0;
+    right:0;
+  }
+
+
+.confirm-box p {
+ 	text-align:center; 
+  padding:10px 0;
+  border-radius:0.4em 0.4em 0 0;
+  text-shadow:0 1px 0 rgba(255,255,255,0.1);
+	border-bottom:1px solid rgba(0,0,0,0.5);
+  margin-bottom:10px;
+}
+
+
+.confirm-box a {
+ 	display:block;
+  float:left;
+  position:relative;
+  
+  padding:7px 40px;
+  margin:5px 5px 15px 5px;
+  
+  text-decoration:none;
+  text-align:center;
+  font-size:13px;
+
+  border:1px solid rgba(0,0,0,0.7);
+  border-radius:0.2em;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    inset 0 20px 20px rgba(255,255,255,0.2),
+    1px 2px 1px rgba(0,0,0,0.2),
+    0 0 2px 8px rgba(50,50,50,0.1);
+  transition:all 0.3s ease-out;
+  background:darkblue;
+  
+  font-weight:bold;
+  color:rgba(255,255,255,0.6);
+  text-shadow:0 1px 0 rgba(255,255,255,0.2);
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+  
+  .confirm-box:hover {
+   	 box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.5),
+      inset 0 -20px 20px rgba(200,200,200,0.1),
+      1px 2px 1px rgba(0,0,0,0.2),
+      0 0 2px 8px rgba(100,100,100,0.1);
+  }
+  
+  .confirm-box:active {
+   	top:3px; 
+  }
+  
+  .confirm-box:first-of-type {
+    margin-left:30px;
+    background:yellow ;
+  }
+  
+  .confirm-box:last-of-type {
+   background:yellow; 
+  }
