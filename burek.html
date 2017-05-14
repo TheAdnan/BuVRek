@@ -10,7 +10,9 @@
   </head>
   <body>
     <a-scene>
-      <a-entity position="0.4 1.6 4.8" camera="active:true;userHeight:1.6" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector="default-camera"></a-entity>
+      <a-entity position="0.4 1.6 4.8" camera="active:true;userHeight:1.6" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector="default-camera">
+         <a-cursor color="white" fuse="true" timeout="10"></a-cursor>
+      </a-entity>
       <a-assets>
         <img id="burek-texture" src="https://img.gs/bbdkhfbzkk/stretch/http://www.bosanski-forum.com/download/file.php?id=8531&t=1&sid=73059bd46708f97c574229c84be533d9">
         <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
@@ -32,7 +34,9 @@
                 material="src: #burek-texture;flatShading:true;side:double;color:#ffdb7a;metalness:1;roughness:0.92">
             <a-animation easing="linear" attribute="rotation" dur="10000" to="-270 0 0" repeat="indefinite"></a-animation>
       </a-entity>
-      
+        <a-entity id="barni-me" position="-8 1 -10" scale="0.6 1.2 1" text-geometry="value: barni me; font: #dawningFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 0.8; size: 0.7; height: 0.3;" material="color:orangered; metalness:0.8; roughness: 0.1; sphericalEnvMap: #chrome;" 
+                  sound="src: url(https://cdn.glitch.com/e7139b4a-e91b-4e0f-a364-32c3d1daf392%2Fkemo.mp3?1494787201710); on: click">
+      </a-entity>
       <a-entity
         geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
         material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
