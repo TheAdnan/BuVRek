@@ -7,6 +7,10 @@
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.3/dist/aframe-extras.min.js"></script>
     <script src="js/burekGeometry.js"></script>
+    <script src="js/createDefault.js"></script>
+    <script type="text/javascript">
+            createBurek();
+    </script>
   </head>
   <body>
     <a-scene>
@@ -22,20 +26,29 @@
         <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
       </a-assets>
 
-      
 
       <a-entity id="text-burek" position="-3 1 -6" rotation="5 0 0">
         <a-entity position="-0.5 0.5 -0.5" scale="0.6 1.2 1" text-geometry="value: Virtual Burek; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.2; curveSegments: 1; size: 1.6; height: 0.4;" material="color:green; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
       </a-entity>
-      
+
       <!-- Burek -->
 
-      <a-entity position="7 2 -1" rotation="90 0 0" scale="0.23 0.06 0.17" geometry="mergeTo:null;primitive:burek" 
+      <a-entity position="7 2 -1" rotation="90 0 0" scale="0.23 0.06 0.17" geometry="mergeTo:null;primitive:burek"
                 material="src: #burek-texture;flatShading:true;side:double;color:#ffdb7a;metalness:1;roughness:0.92">
             <a-animation easing="linear" attribute="rotation" dur="10000" to="-270 0 0" repeat="indefinite"></a-animation>
       </a-entity>
-        <a-entity id="barni-me" position="-8 1 -10" scale="0.6 1.2 1" text-geometry="value: barni me; font: #dawningFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 0.8; size: 0.7; height: 0.3;" material="color:orangered; metalness:0.8; roughness: 0.1; sphericalEnvMap: #chrome;" 
+       <a-entity position="-4 2 1" rotation="90 0 0" scale="0.43 0.26 0.47" geometry="primitive: box"
+                material="color:#2ecc71;metalness:0.2;roughness:0.22">
+            <a-animation easing="linear" attribute="position" dur="10000" from = "-4 2 1"to="-2 10 0" repeat="indefinite"></a-animation>
+      </a-entity>
+          <a-entity position="4 -2 5" rotation="90 0 0" scale="0.43 0.26 0.47" geometry="primitive: sphere; radius: 4"
+                material="src: #burek-texture;color:#2ecc71;metalness:0.2;roughness:0.22">
+            <a-animation easing="linear" attribute="material.color" dur="10000" from = "blue"to="red" repeat="indefinite"></a-animation>
+      </a-entity>
+        <a-entity id="barni-me" position="-8 1 -10" scale="0.6 1.2 1" text-geometry="value: barni me; font: #dawningFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 0.8; size: 0.7; height: 0.3;" material="color:orangered; metalness:0.8; roughness: 0.1; sphericalEnvMap: #chrome;"
                   sound="src: url(https://cdn.glitch.com/e7139b4a-e91b-4e0f-a364-32c3d1daf392%2Fkemo.mp3?1494787201710); on: click">
+      </a-entity>
+      <a-entity class="clickable" id="entityCreator"  position="-2 5 -4" scale="0.6 1.2 1" geometry="primitive:box" material="color:blue; metalness:0.8; roughness: 0.1; sphericalEnvMap: #chrome;" onclick = "createBurek()" >
       </a-entity>
       <a-entity
         geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
