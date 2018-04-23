@@ -5,13 +5,14 @@
     <meta name="description" content="BuVRek - Virtual Burek by Adnan Kičin">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
-    <script src="https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.3/dist/aframe-extras.min.js"></script>
     <script src="js/burekGeometry.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-entity position="0.4 1.6 4.8" camera="active:true;userHeight:1.6" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector="default-camera">
+      <a-entity position="0.4 1.6 4.8" camera="active:true;userHeight:1.6" mouse-controls wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector="default-camera">
          <a-cursor color="white" fuse="true" timeout="10"></a-cursor>
+  </a-entity>
       </a-entity>
       <a-assets>
         <img id="burek-texture" src="https://img.gs/bbdkhfbzkk/stretch/http://www.bosanski-forum.com/download/file.php?id=8531&t=1&sid=73059bd46708f97c574229c84be533d9">
@@ -34,7 +35,7 @@
                 material="src: #burek-texture;flatShading:true;side:double;color:#ffdb7a;metalness:1;roughness:0.92">
             <a-animation easing="linear" attribute="rotation" dur="10000" to="-270 0 0" repeat="indefinite"></a-animation>
       </a-entity>
-        <a-entity id="barni-me" position="-8 1 -10" scale="0.6 1.2 1" text-geometry="value: barni me; font: #dawningFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 0.8; size: 0.7; height: 0.3;" material="color:orangered; metalness:0.8; roughness: 0.1; sphericalEnvMap: #chrome;" 
+        <a-entity id="barni-me" position="-8 2 -7" scale="0.6 1.2 1" text-geometry="value: pipni me; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 0.8; size: 0.7; height: 0.3;" material="color:yellow; metalness:0.8; roughness: 0.1; sphericalEnvMap: #chrome;" 
                   sound="src: url(https://cdn.glitch.com/e7139b4a-e91b-4e0f-a364-32c3d1daf392%2Fkemo.mp3?1494787201710); on: click">
       </a-entity>
       <a-entity

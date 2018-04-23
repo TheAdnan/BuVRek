@@ -31,3 +31,18 @@
   }
 });
 
+AFRAME.registerComponent('make-burek',
+                        {
+  schema:{
+    
+  },
+
+  update: function(){
+    if(this.data.event == 'click'){
+      this.el.addEventListener('click', function(){
+      alert('is Clicked');
+    });
+    }
+    
+  }
+});
